@@ -1,0 +1,166 @@
+# --- General Sensitive Files & Credentials ---
+# Generic credential files
+credentials.*
+credential.*
+secret.*
+secrets.*
+token.*
+tokens.*
+auth.*
+authentication.*
+key.*
+keys.*
+access_key*
+secret_key*
+private_key*
+*.pem
+*.key
+*.p12
+*.pfx
+*.asc
+*.gpg
+*.cer
+*.crt
+*.pub
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+ssh_host_*_key
+
+# Environment configuration files (often contain secrets)
+.env
+.env.*
+env.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.envrc
+.settings
+settings.local.php
+local_settings.py
+*.config           # Can be overly broad; refine with specific names if possible
+config.json        # Consider more specific naming if this is too broad
+secrets.json
+secrets.yaml
+secrets.yml
+*.properties       # Often used in Java for configuration
+
+# Session files
+*.session
+*.sess
+
+# Password files
+*password*
+*passwd*
+*.pswd
+*.pwd
+
+# --- Cloud Provider Credentials & Configurations ---
+# AWS
+.aws/
+aws.json
+aws_secrets.yml
+terraform.tfvars       # Often contains sensitive infrastructure variables
+*.tfstate              # Terraform state files can contain secrets
+*.tfstate.backup
+
+# Microsoft Azure
+azure_credentials.json
+azure_service_principal.json
+
+# Other Cloud & DevOps Tools
+*kubeconfig*
+
+# --- Language & Framework Specific ---
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+env/
+venv/
+ENV/
+.venv/
+.env/
+*.db                   # Local databases like sqlite
+*.sqlite
+*.sqlite3
+
+# Node.js / JavaScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npmrc                 # Can contain auth tokens
+.yarnrc                # Can contain auth tokens
+.yarn/                 # Yarn 2+ cache, release files
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+.gradle/
+local.properties       # Android local properties
+
+# Ruby
+.bundle/
+vendor/bundle/
+*.rbc
+.gemtags
+.irbrc
+
+# PHP / Composer
+vendor/
+phpunit.xml           # Can contain DB credentials for testing
+config.php            # Generic, make more specific if possible
+wp-config.php         # WordPress credentials
+
+# .NET / C#
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.csproj.user
+*.vbproj.user
+appsettings.Development.json     # Often contains developer secrets
+secrets.xml
+*.Publish.xml
+
+# Mobile (iOS/Android common)
+*.keystore
+*.jks
+*.cer
+*.signingkey
+
+# --- Database Related ---
+# Dumps
+*.sql.gz
+*.dump
+*.bak
+*.backup
+
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# --- OS Specific Files ---
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# History files from shells or tools
+.bash_history
+.zsh_history
+.mysql_history
+.psql_history
+.python_history
+.lesshst
+
+# Prometheus and Grafana data directories
+data/
