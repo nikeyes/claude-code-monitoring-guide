@@ -15,10 +15,11 @@
       }
     ]
   },
+  "description": "Info about limits:\n\nPractically what do these limits mean?\n\nPro ($20/month): Average users can send approximately 45 messages with Claude every five hours, OR send approximately 10-40 prompts with Claude Code every five hours. Most Pro users can expect 40-80 hours of Sonnet 4 within their weekly rate limits.\n\nThis will vary based on factors such as codebase size and user settings like auto-accept mode. Users running multiple Claude Code instances in parallel will hit their limits sooner.\n\nUsing Claude Code with your Pro or Max plan | Anthropic Help Center: https://support.anthropic.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan",
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 27,
+  "id": 2,
   "links": [],
   "panels": [
     {
@@ -351,7 +352,7 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 24,
+        "w": 12,
         "x": 0,
         "y": 8
       },
@@ -389,6 +390,80 @@
         }
       ],
       "title": "Coste Total Calculado (desde Tokens Individuales)",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "yellow",
+                "value": 0.01
+              },
+              {
+                "color": "red",
+                "value": 0.1
+              }
+            ]
+          },
+          "unit": "currencyUSD"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "id": 14,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total{type=\"input\"}[$__range])) +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"output\"}[$__range])) +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheRead\"}[$__range])) +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheCreation\"}[$__range]))\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Total Tokens Calculado (desde Tokens Individuales)",
       "type": "stat"
     },
     {
@@ -1321,7 +1396,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Claude Code - ROI Enhanced Dashboard",
-  "uid": "claude-code-roi-enhanced-1",
-  "version": 12
+  "title": "New Claude Code - ROI Enhanced Dashboard",
+  "uid": "new-claude-code-roi-enhanced-1",
+  "version": 6
 }
