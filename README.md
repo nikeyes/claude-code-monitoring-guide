@@ -6,6 +6,22 @@ A comprehensive guide to measuring the return on investment for Claude Code impl
 
 This repository contains a complete walkthrough for setting up telemetry, measuring costs, tracking productivity, and calculating ROI for Claude Code usage. Whether you're an individual developer or managing a large engineering team, this guide provides the tools and metrics needed to make data-driven decisions about AI coding assistance.
 
+## Quick Start
+
+Start services:
+```bash
+docker-compose up -d
+```
+
+Stop services:
+```bash
+docker-compose down
+```
+
+Once running, access:
+- **Prometheus**: http://localhost:9090
+- **Grafana**: http://localhost:3000 (admin/admin)
+
 ## What's Included
 
 - **Telemetry Setup**: Complete Prometheus and OpenTelemetry configuration
