@@ -11,11 +11,15 @@ scrape_configs:
   - job_name: 'otel-collector'
     static_configs:
       - targets: ['otel-collector:8889']
+    # metric_relabel_configs:
+    #   - source_labels: [__name__]
+    #     regex: 'claude_code_.*'
+    #     action: keep
 
   # Scrape Prometheus itself
-  - job_name: 'prometheus'
-    static_configs:
-      - targets: ['localhost:9090']
+  # - job_name: 'prometheus'
+  #   static_configs:
+  #     - targets: ['localhost:9090']
 
   # Add additional scraping targets here if needed
   # - job_name: 'your-app'

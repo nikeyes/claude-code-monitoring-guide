@@ -13,6 +13,17 @@ processors:
   memory_limiter:
     check_interval: 1s
     limit_mib: 512
+  filter:
+    metrics:
+      exclude:
+        match_type: regexp
+        metric_names:
+          - "otelcol_.*"
+          - ".*memory_limiter.*"
+          - ".*transport.*"
+          - "go_.*"
+          - "process_.*"
+          - "scrape_.*"
 
 exporters:
   prometheus:
@@ -20,7 +31,7 @@ exporters:
     send_timestamps: true
     metric_expiration: 180m
     enable_open_metrics: true
-    
+
   debug:
     verbosity: detailed
     sampling_initial: 5
@@ -30,11 +41,11 @@ service:
   pipelines:
     metrics:
       receivers: [otlp]
-      processors: [memory_limiter, batch]
+      processors: [memory_limiter, batch, filter]
       exporters: [prometheus, debug]
-      
+
   extensions: []
-  
+
   telemetry:
     logs:
       level: "debug"

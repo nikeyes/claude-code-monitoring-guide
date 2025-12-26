@@ -37,3 +37,13 @@ Read the complete guide in [`claude_code_roi_full.md`](claude_code_roi_full.md) 
 This guide is based on real-world implementation experience. If you have additional insights or improvements, please feel free to create an issue / PR.
 
 This guide was written by [Kashyap Coimbatore Murali](https://www.linkedin.com/in/kashyap-murali/)
+
+
+# How to delete corrupted dashboard
+```bash
+sqlite3 data/grafana/grafana.db 
+
+SELECT id, uid, slug, title  FROM dashboard;
+
+DELETE FROM dashboard WHERE id = DASHBOARD_ID
+```
