@@ -39,310 +39,6 @@
               {
                 "color": "green",
                 "value": 0
-              },
-              {
-                "color": "yellow",
-                "value": 0.01
-              },
-              {
-                "color": "red",
-                "value": 0.05
-              }
-            ]
-          },
-          "unit": "currencyUSD"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 6,
-        "x": 0,
-        "y": 0
-      },
-      "id": 1,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "12.2.0-16711121739",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "sum(increase(claude_code_token_usage_tokens_total{type=\"input\"}[$__range])) * 0.003 / 1000",
-          "instant": false,
-          "legendFormat": "Input Token Cost",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "Coste por Input Tokens",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": 0
-              },
-              {
-                "color": "yellow",
-                "value": 0.01
-              },
-              {
-                "color": "red",
-                "value": 0.05
-              }
-            ]
-          },
-          "unit": "currencyUSD"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 6,
-        "x": 6,
-        "y": 0
-      },
-      "id": 2,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "12.2.0-16711121739",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "sum(increase(claude_code_token_usage_tokens_total{type=\"output\"}[$__range])) * 0.015 / 1000",
-          "instant": false,
-          "legendFormat": "Output Token Cost",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "Coste por Output Tokens",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": 0
-              },
-              {
-                "color": "yellow",
-                "value": 0.001
-              },
-              {
-                "color": "red",
-                "value": 0.005
-              }
-            ]
-          },
-          "unit": "currencyUSD"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 6,
-        "x": 12,
-        "y": 0
-      },
-      "id": 3,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "12.2.0-16711121739",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "sum(increase(claude_code_token_usage_tokens_total{type=\"cacheRead\"}[$__range])) * 0.0003 / 1000",
-          "instant": false,
-          "legendFormat": "Cache Read Cost",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "Coste por Lectura de Cache",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": 0
-              },
-              {
-                "color": "yellow",
-                "value": 0.001
-              },
-              {
-                "color": "red",
-                "value": 0.01
-              }
-            ]
-          },
-          "unit": "currencyUSD"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 6,
-        "x": 18,
-        "y": 0
-      },
-      "id": 4,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "12.2.0-16711121739",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "sum(increase(claude_code_token_usage_tokens_total{type=\"cacheCreation\"}[$__range])) * 0.00375 / 1000",
-          "instant": false,
-          "legendFormat": "Cache Creation Cost",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "Coste por Creación de Cache",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": 0
-              },
-              {
-                "color": "yellow",
-                "value": 0.01
-              },
-              {
-                "color": "red",
-                "value": 0.1
               }
             ]
           },
@@ -352,9 +48,9 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 12,
+        "w": 3,
         "x": 0,
-        "y": 8
+        "y": 0
       },
       "id": 8,
       "options": {
@@ -382,14 +78,14 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total{type=\"input\"}[$__range])) * 0.003 / 1000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"output\"}[$__range])) * 0.015 / 1000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheRead\"}[$__range])) * 0.0003 / 1000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheCreation\"}[$__range])) * 0.00375 / 1000\n)",
+          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total{type=\"input\", model=~\".*wshiylzvmcg5\"}[$__range])) * 5 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"output\", model=~\".*wshiylzvmcg5\"}[$__range])) * 25 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheCreation\", model=~\".*wshiylzvmcg5\"}[$__range])) * 6.25 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheRead\", model=~\".*wshiylzvmcg5\"}[$__range])) * 0.5 / 1000000\n)",
           "instant": false,
           "legendFormat": "Total Calculated Cost",
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "Coste Total Calculado (desde Tokens Individuales)",
+      "title": "Opus 4.5 - Coste Total Calculado (desde Tokens Individuales)",
       "type": "stat"
     },
     {
@@ -409,14 +105,6 @@
               {
                 "color": "green",
                 "value": 0
-              },
-              {
-                "color": "yellow",
-                "value": 0.01
-              },
-              {
-                "color": "red",
-                "value": 0.1
               }
             ]
           },
@@ -426,9 +114,339 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 12,
+        "w": 3,
+        "x": 3,
+        "y": 0
+      },
+      "id": 18,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total{type=\"input\", model=~\".*wznn2alug7nv\"}[$__range])) * 5 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"output\", model=~\".*wznn2alug7nv\"}[$__range])) * 25 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheCreation\", model=~\".*wznn2alug7nv\"}[$__range])) * 6.25 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheRead\", model=~\".*wznn2alug7nv\"}[$__range])) * 0.5 / 1000000\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Opus 4.6 - Coste Total Calculado (desde Tokens Individuales)",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "currencyUSD"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 6,
+        "y": 0
+      },
+      "id": 20,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total{type=\"input\", model=~\".*wznn2alug7nv\\\\[1m\\\\]\"}[$__range])) * 10 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"output\", model=~\".*wznn2alug7nv\\\\[1m\\\\]\"}[$__range])) * 37.50 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheCreation\", model=~\".*wznn2alug7nv\\\\[1m\\\\]\"}[$__range])) * 12.50 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheRead\", model=~\".*wznn2alug7nv\\\\[1m\\\\]\"}[$__range])) * 1 / 1000000\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Opus 4.6 - 1M - Coste Total Calculado (desde Tokens Individuales)",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "currencyUSD"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 9,
+        "y": 0
+      },
+      "id": 17,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total{type=\"input\", model=~\".*eout1hz85i3f\"}[$__range])) * 3 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"output\", model=~\".*eout1hz85i3f\"}[$__range])) * 15 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheCreation\", model=~\".*eout1hz85i3f\"}[$__range])) * 3.75 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheRead\", model=~\".*eout1hz85i3f\"}[$__range])) * 0.3 / 1000000\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Sonnet 4.6 - Coste Total Calculado (desde Tokens Individuales)",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "currencyUSD"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
         "x": 12,
-        "y": 8
+        "y": 0
+      },
+      "id": 21,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total{type=\"input\", model=~\".*eout1hz85i3f\\\\[1m\\\\]\"}[$__range])) * 6 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"output\", model=~\".*eout1hz85i3f\\\\[1m\\\\]\"}[$__range])) * 22.5 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheCreation\", model=~\".*eout1hz85i3f\\\\[1m\\\\]\"}[$__range])) * 7.50 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheRead\", model=~\".*eout1hz85i3f\\\\[1m\\\\]\"}[$__range])) * 0.6 / 1000000\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Sonnet 4.6 [1m] - Coste Total Calculado (desde Tokens Individuales)",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "currencyUSD"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 15,
+        "y": 0
+      },
+      "id": 19,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total{type=\"input\", model=~\".*3cn380t3n7wt.*\"}[$__range])) * 1 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"output\", model=~\".*3cn380t3n7wt.*\"}[$__range])) * 5 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheCreation\", model=~\".*3cn380t3n7wt.*\"}[$__range])) * 1.25 / 1000000 +\n  sum(increase(claude_code_token_usage_tokens_total{type=\"cacheRead\", model=~\".*3cn380t3n7wt.*\"}[$__range])) * 0.1 / 1000000\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Haiku 4.5 - Coste Total Calculado (desde Tokens Individuales)",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "sishort"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 20,
+        "y": 0
       },
       "id": 14,
       "options": {
@@ -463,7 +481,865 @@
           "refId": "A"
         }
       ],
-      "title": "Total Tokens Calculado (desde Tokens Individuales)",
+      "title": "Total Tokens Individual Metrics",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "currencyUSD"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 0,
+        "y": 4
+      },
+      "id": 23,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_cost_usage_USD_total{model=~\".*wshiylzvmcg5\"}[$__range]))\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Opus 4.5 - $",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "currencyUSD"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 3,
+        "y": 4
+      },
+      "id": 24,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_cost_usage_USD_total{model=~\".*wznn2alug7nv\"}[$__range]))\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Opus 4.6 - $",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "currencyUSD"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 6,
+        "y": 4
+      },
+      "id": 25,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_cost_usage_USD_total{model=~\".*wznn2alug7nv\\\\[1m\\\\]\"}[$__range]))\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Opus 4.6 - 1M - $",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "currencyUSD"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 9,
+        "y": 4
+      },
+      "id": 26,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_cost_usage_USD_total{model=~\".*eout1hz85i3f\"}[$__range]))\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Sonnet 4.6 - $",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "currencyUSD"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 12,
+        "y": 4
+      },
+      "id": 27,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_cost_usage_USD_total{model=~\".*eout1hz85i3f\\\\[1m\\\\]\"}[$__range]))\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Sonnet 4.6 [1m] - $",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "currencyUSD"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 15,
+        "y": 4
+      },
+      "id": 28,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_cost_usage_USD_total{model=~\".*3cn380t3n7wt.*\"}[$__range]))\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Haiku 4.5 - $",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "sishort"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 20,
+        "y": 4
+      },
+      "id": 16,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total[$__range]))\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Total Tokens Aggregate Metric",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "sishort"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 0,
+        "y": 8
+      },
+      "id": 29,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total{model=~\".*wshiylzvmcg5\"}[$__range]))\n)",
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Opus 4.5 - Tokens",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "sishort"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 3,
+        "y": 8
+      },
+      "id": 30,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total{model=~\".*wznn2alug7nv\"}[$__range]))\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Opus 4.6 - Tokens",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "sishort"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 6,
+        "y": 8
+      },
+      "id": 31,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total{model=~\".*wznn2alug7nv\\\\[1m\\\\]\"}[$__range]))\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Opus 4.6 - 1M - Tokens",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "sishort"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 9,
+        "y": 8
+      },
+      "id": 32,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total{model=~\".*eout1hz85i3f\"}[$__range]))\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Sonnet 4.6 - Tokens",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "sishort"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 12,
+        "y": 8
+      },
+      "id": 33,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total{model=~\".*eout1hz85i3f\\\\[1m\\\\]\"}[$__range]))\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Sonnet 4.6 [1m] - Tokens",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "sishort"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 15,
+        "y": 8
+      },
+      "id": 34,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0-16711121739",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "(\n  sum(increase(claude_code_token_usage_tokens_total{model=~\".*3cn380t3n7wt.*\"}[$__range]))\n)",
+          "instant": false,
+          "legendFormat": "Total Calculated Cost",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Haiku 4.5 - Tokens",
       "type": "stat"
     },
     {
@@ -1040,51 +1916,12 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "sum by (user_id) (increase(claude_code_token_usage_tokens_total{type=\"input\"}[$__range])) * 0.003 / 1000",
+          "expr": "sum by (user_id) (increase(claude_code_cost_usage_USD_total{}[$__range]))",
           "format": "table",
           "instant": true,
           "legendFormat": "Input Cost",
           "range": false,
           "refId": "A"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "sum by (user_id) (increase(claude_code_token_usage_tokens_total{type=\"output\"}[$__range])) * 0.015 / 1000",
-          "format": "table",
-          "instant": true,
-          "legendFormat": "Output Cost",
-          "range": false,
-          "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "sum by (user_id) (increase(claude_code_token_usage_tokens_total{type=\"cacheRead\"}[$__range])) * 0.0003 / 1000",
-          "format": "table",
-          "instant": true,
-          "legendFormat": "Cache Read Cost",
-          "range": false,
-          "refId": "C"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "sum by (user_id) (increase(claude_code_token_usage_tokens_total{type=\"cacheCreation\"}[$__range])) * 0.00375 / 1000",
-          "format": "table",
-          "instant": true,
-          "legendFormat": "Cache Creation Cost",
-          "range": false,
-          "refId": "D"
         }
       ],
       "title": "Coste Detallado por Usuario",
@@ -1288,7 +2125,7 @@
             }
           },
           "mappings": [],
-          "unit": "currencyUSD"
+          "unit": "sishort"
         },
         "overrides": []
       },
@@ -1331,50 +2168,14 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "sum(increase(claude_code_token_usage_tokens_total{type=\"input\"}[$__range])) * 0.003 / 1000",
+          "expr": "sum by (type)(increase(claude_code_token_usage_tokens_total{}[$__range]))",
           "instant": false,
-          "legendFormat": "Input Tokens",
+          "legendFormat": "__auto",
           "range": true,
           "refId": "A"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "sum(increase(claude_code_token_usage_tokens_total{type=\"output\"}[$__range])) * 0.015 / 1000",
-          "instant": false,
-          "legendFormat": "Output Tokens",
-          "range": true,
-          "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "sum(increase(claude_code_token_usage_tokens_total{type=\"cacheRead\"}[$__range])) * 0.0003 / 1000",
-          "instant": false,
-          "legendFormat": "Cache Read",
-          "range": true,
-          "refId": "C"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "sum(increase(claude_code_token_usage_tokens_total{type=\"cacheCreation\"}[$__range])) * 0.00375 / 1000",
-          "instant": false,
-          "legendFormat": "Cache Creation",
-          "range": true,
-          "refId": "D"
         }
       ],
-      "title": "Distribución de Costes por Tipo de Token",
+      "title": "Token Usage by Type",
       "type": "piechart"
     },
     {
@@ -1463,12 +2264,12 @@
     "list": []
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-7d",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "New Claude Code - ROI Enhanced Dashboard",
   "uid": "new-claude-code-roi-enhanced-1",
-  "version": 2
+  "version": 70
 }
